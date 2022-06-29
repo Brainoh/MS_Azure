@@ -5,13 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Test Test TestVanilla JavaScript App</title>
+  <title>Vanilla JavaScript App</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
+  <div class="prices"></div>
+
+  <script>
+    $.getJSON('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=10&CMC_PRO_API_KEY=b373109b-839d-4d6e-af1a-1c431dcee538', function(data) {
+
+      var x = 'Coin:  ${data.name}<br>Price: ${data.price}'
+      $(".prices").html(text);
+
+
+    });
+  </script>
 </body>
 
 </html>
