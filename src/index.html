@@ -13,7 +13,15 @@
   <div class="prices"></div>
 
   <script>
-    let response = fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=10&CMC_PRO_API_KEY=b373109b-839d-4d6e-af1a-1c431dcee538');
+    let url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=10&CMC_PRO_API_KEY=b373109b-839d-4d6e-af1a-1c431dcee538";
+
+    fetch(url + qString, { mode: "no-cors" })
+    .then(resp => {
+      return resp.json();
+    })
+    .then(data => {
+      console.log(data);
+    });
   </script>
 </body>
 
