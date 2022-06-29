@@ -16,12 +16,10 @@
     let url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=10&CMC_PRO_API_KEY=b373109b-839d-4d6e-af1a-1c431dcee538";
 
     fetch(url, { mode: "no-cors" })
-    .then(resp => {
-      resp.json();
-    })
-    .then(data => {
-      console.log(data);
-    });
+    .then(res => res.json())
+    .then((out) => {
+        console.log('Output: ', out);
+}).catch(err => console.error(err));
   </script>
 </body>
 
