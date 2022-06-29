@@ -17,7 +17,7 @@
 
     fetch(url, { mode: "no-cors" })
     .then(resp => {
-      return resp.json();
+      resp.json();
     })
     .then(data => {
       console.log(data);
