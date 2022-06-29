@@ -13,13 +13,7 @@
   <div class="prices"></div>
 
   <script>
-    $.getJSON('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=10&CMC_PRO_API_KEY=b373109b-839d-4d6e-af1a-1c431dcee538', function(data) {
-
-      var x = 'Coin:  ${data.name}<br>Price: ${data.price}'
-      $(".prices").html(x);
-
-
-    });
+    let response = fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=10&CMC_PRO_API_KEY=b373109b-839d-4d6e-af1a-1c431dcee538');
   </script>
 </body>
 
